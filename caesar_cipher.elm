@@ -77,11 +77,10 @@ update msg model =
 view model =
   div []
     [ div [newStyle][node "center" [][h1[][ text "Caesar    Cipher"]]]
-     ,div [myStyle][ input [ placeholder "Text to encrypt", onInput NewContent,onMouseEnter Welcome,onMouseLeave Bye, myStyle] []], br[][],br[][]
-    , div [ myStyle ] [  ]
+    , div [myStyle][ input [ placeholder "Text to encrypt", onInput NewContent,onMouseEnter Welcome,onMouseLeave Bye, myStyle] []], br[][],br[][]
     , div [ myStyle ] [ text (model.jaan) ]
     , button [ onClick Encrypt][ text "Encrypt"]
-    ,  div [ myStyle ] [ text (model.content) ]
+    , div [ myStyle ] [ text (model.content) ]
     , button [onClick Decrypt][text "Decrypt"]
 
     ]
